@@ -1,0 +1,23 @@
+/**
+ * New query file
+ */
+query selectDrugByOwner {
+  description: "View Drugs owned by participant"
+  statement:
+      SELECT org.example.mynetwork.Drug
+          WHERE (presentOwner == _$presentOwner)
+}
+
+query ViewByDrug {
+  description: "View Drugs by name"
+  statement:
+      SELECT org.example.mynetwork.Drug
+          WHERE (DrugName == _$DrugName)
+}
+
+query ViewByDrugid {
+  description: "View Drugs by id"
+  statement:
+      SELECT org.example.mynetwork.Drug
+          WHERE (DrugId == _$DrugId)
+}
