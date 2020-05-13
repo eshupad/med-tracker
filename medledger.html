@@ -1,6 +1,30 @@
 
 <html>
   <head>
+  	<style>
+#drugs {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#drugs td, #drugs th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#drugs tr:nth-child(even){background-color: #f2f2f2;}
+
+#drugs tr:hover {background-color: #ddd;}
+
+#drugs th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
     <title> Drug Information </title>
     <meta charset="UTF-8">
     <script>
@@ -11,7 +35,7 @@
         xmlhttp.onreadystatechange = function() {
           if(xmlhttp.readyState ===4 && xmlhttp.status ===200){
             var drugs = JSON.parse(xmlhttp.responseText);
-            var tbltop = `<table>
+            var tbltop = `<table id = "drugs">
 			    <tr><th>DrugId</th><th>Drug Name</th><th>Qty</th><th>Owner</th></tr>`;
             //main table content we fill from data from the rest call
             var main ="";
