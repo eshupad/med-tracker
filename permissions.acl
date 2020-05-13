@@ -45,7 +45,7 @@ rule NetworkAdminSystem {
 
 
 rule ManufacturerCanUpdateSelf {
-  description: "Trader can see and update their own record only"
+  description: "Manufacturer can view and update their own record only"
   participant(t): "org.example.mynetwork.Manufacturer"
   operation: READ, UPDATE
   resource(v): "org.example.mynetwork.Manufacturer"
@@ -54,7 +54,7 @@ rule ManufacturerCanUpdateSelf {
 }
 
 rule WholesalerCanUpdateSelf {
-  description: "Trader can see and update their own record only"
+  description: "Wholesaler can view and update their own record only"
   participant(t): "org.example.mynetwork.Wholesaler"
   operation: READ, UPDATE
   resource(v): "org.example.mynetwork.Wholesaler"
@@ -63,7 +63,7 @@ rule WholesalerCanUpdateSelf {
 }
 
 rule DistributorCanUpdateSelf {
-  description: "Trader can see and update their own record only"
+  description: "Distributor can view and update their own record only"
   participant(t): "org.example.mynetwork.Distributor"
   operation: READ, UPDATE
   resource(v): "org.example.mynetwork.Distributor"
@@ -72,7 +72,7 @@ rule DistributorCanUpdateSelf {
 }
 
 rule PharmacistCanUpdateSelf {
-  description: "Trader can see and update their own record only"
+  description: "Pharmacist can view and update their own record only"
   participant(t): "org.example.mynetwork.Pharmacist"
   operation: READ, UPDATE
   resource(v): "org.example.mynetwork.Pharmacist"
@@ -81,7 +81,7 @@ rule PharmacistCanUpdateSelf {
 }
 
 rule ManufacturerCanViewManufacturer {
-  description: "Trader can see and update their own record only"
+  description: "Manufacturer can view other Manufacturers"
   participant: "org.example.mynetwork.Manufacturer"
   operation: READ
   resource: "org.example.mynetwork.Manufacturer"
@@ -89,7 +89,7 @@ rule ManufacturerCanViewManufacturer {
 }
 
 rule WholesalerCanViewManufacturer {
-  description: "Trader can see and update their own record only"
+  description: "Wholesaler can view other Manufacturers"
   participant: "org.example.mynetwork.Wholesaler"
   operation: READ
   resource: "org.example.mynetwork.Manufacturer"
@@ -97,7 +97,7 @@ rule WholesalerCanViewManufacturer {
 }
 
 rule DistributorCanViewManufacturer {
-  description: "Trader can see and update their own record only"
+  description: "Distributor can view other Manufacturers"
   participant: "org.example.mynetwork.Distributor"
   operation: READ
   resource: "org.example.mynetwork.Manufacturer"
@@ -105,7 +105,7 @@ rule DistributorCanViewManufacturer {
 }
 
 rule PharmacistCanViewManufacturer {
-  description: "Trader can see and update their own record only"
+  description: "Pharmacist can view other Manufacturers"
   participant: "org.example.mynetwork.Pharmacist"
   operation: READ
   resource: "org.example.mynetwork.Manufacturer"
@@ -113,7 +113,7 @@ rule PharmacistCanViewManufacturer {
 }
 
 rule ManufacturerCanViewDistributor {
-  description: "Trader can see and update their own record only"
+  description: "Manufacturer can view other Distributors"
   participant: "org.example.mynetwork.Manufacturer"
   operation: READ
   resource: "org.example.mynetwork.Distributor"
@@ -121,7 +121,7 @@ rule ManufacturerCanViewDistributor {
 }
 
 rule DistributorCanViewDistributor {
-  description: "Trader can see and update their own record only"
+  description: "Distributor can view other Distributors"
   participant: "org.example.mynetwork.Distributor"
   operation: READ
   resource: "org.example.mynetwork.Distributor"
@@ -129,7 +129,7 @@ rule DistributorCanViewDistributor {
 }
 
 rule WholesalerCanViewDistributor {
-  description: "Trader can see and update their own record only"
+  description: "Wholesaler can view other Distributors"
   participant: "org.example.mynetwork.Wholesaler"
   operation: READ
   resource: "org.example.mynetwork.Distributor"
@@ -137,7 +137,7 @@ rule WholesalerCanViewDistributor {
 }
 
 rule PharmacistCanViewDistributor {
-  description: "Trader can see and update their own record only"
+  description: "Pharmacist can view other Distributors"
   participant: "org.example.mynetwork.Pharmacist"
   operation: READ
   resource: "org.example.mynetwork.Distributor"
@@ -146,7 +146,7 @@ rule PharmacistCanViewDistributor {
 
 
 rule ManufacturerCanViewWholesaler {
-  description: "Trader can see and update their own record only"
+  description: "Manufacturer can view other Wholesalers"
   participant: "org.example.mynetwork.Manufacturer"
   operation: READ
   resource: "org.example.mynetwork.Wholesaler"
@@ -154,7 +154,7 @@ rule ManufacturerCanViewWholesaler {
 }
 
 rule DistributorCanViewWholesaler {
-  description: "Trader can see and update their own record only"
+  description: "Distributor can view other Wholesalers"
   participant: "org.example.mynetwork.Distributor"
   operation: READ
   resource: "org.example.mynetwork.Wholesaler"
@@ -162,7 +162,7 @@ rule DistributorCanViewWholesaler {
 }
 
 rule WholesalerCanViewWholesaler {
-  description: "Trader can see and update their own record only"
+  description: "Wholesaler can view other Wholesalers"
   participant: "org.example.mynetwork.Wholesaler"
   operation: READ
   resource: "org.example.mynetwork.Wholesaler"
@@ -170,7 +170,7 @@ rule WholesalerCanViewWholesaler {
 }
 
 rule PharmacistCanViewWholesaler {
-  description: "Trader can see and update their own record only"
+  description: "Pharmacist can view other Wholesalers"
   participant: "org.example.mynetwork.Pharmacist"
   operation: READ
   resource: "org.example.mynetwork.Wholesaler"
@@ -179,7 +179,7 @@ rule PharmacistCanViewWholesaler {
 
 
 rule ManufacturerCanViewPharmacist {
-  description: "Trader can see and update their own record only"
+  description: "Manufacturer can view other Pharmacists"
   participant: "org.example.mynetwork.Manufacturer"
   operation: READ
   resource: "org.example.mynetwork.Pharmacist"
@@ -187,7 +187,7 @@ rule ManufacturerCanViewPharmacist {
 }
 
 rule WholesalerCanViewPharmacist {
-  description: "Trader can see and update their own record only"
+  description: "Wholesaler can view other Pharmacists"
   participant: "org.example.mynetwork.Wholesaler"
   operation: READ
   resource: "org.example.mynetwork.Pharmacist"
@@ -195,7 +195,7 @@ rule WholesalerCanViewPharmacist {
 }
 
 rule DistributorCanViewPharmacist {
-  description: "Trader can see and update their own record only"
+  description: "Distributor can view other Pharmacists"
   participant: "org.example.mynetwork.Distributor"
   operation: READ
   resource: "org.example.mynetwork.Pharmacist"
@@ -203,7 +203,7 @@ rule DistributorCanViewPharmacist {
 }
 
 rule PharmacistCanViewPharmacist {
-  description: "Trader can see and update their own record only"
+  description: "Pharmacist can view other Pharmacists"
   participant: "org.example.mynetwork.Pharmacist"
   operation: READ
   resource: "org.example.mynetwork.Pharmacist"
@@ -211,7 +211,7 @@ rule PharmacistCanViewPharmacist {
 }
 
 rule PharmacistDoesNotCreateDrugs {
-    description: "Fred can DELETE the car ABC123"
+    description: "Pharmacist can't create drugs"
     participant: "org.example.mynetwork.Pharmacist"
     operation: CREATE
     resource: "org.example.mynetwork.Drug"
@@ -219,7 +219,7 @@ rule PharmacistDoesNotCreateDrugs {
 }
 
 rule WholesalerDoesNotCreateDrugs {
-    description: "Fred can DELETE the car ABC123"
+    description: "Wholesaler can't create drugs"
     participant: "org.example.mynetwork.Wholesaler"
     operation: CREATE
     resource: "org.example.mynetwork.Drug"
@@ -227,7 +227,7 @@ rule WholesalerDoesNotCreateDrugs {
 }
 
 rule DistributorDoesNotCreateDrugs {
-    description: "Fred can DELETE the car ABC123"
+    description: "Distributor can't create drugs"
     participant: "org.example.mynetwork.Distributor"
     operation: CREATE
     resource: "org.example.mynetwork.Drug"
@@ -244,7 +244,7 @@ rule ManufacturerUpdatesOwnDrug {
 }
 
 rule ManufacturerDoesNotUpdateOthersDrugs {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Manufacturer can't work with others drugs"
   participant(t): "org.example.mynetwork.Manufacturer"
   operation: CREATE, UPDATE, DELETE
   resource(c): "org.example.mynetwork.Drug"
@@ -253,7 +253,7 @@ rule ManufacturerDoesNotUpdateOthersDrugs {
 }
 
 rule WholesalerDoesNotUpdateOthersDrugs {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Wholesaler can't work with others drugs"
   participant(t): "org.example.mynetwork.Wholesaler"
   operation: CREATE, UPDATE, DELETE
   resource(c): "org.example.mynetwork.Drug"
@@ -262,7 +262,7 @@ rule WholesalerDoesNotUpdateOthersDrugs {
 }
 
 rule DistributorDoesNotUpdateOthersDrugs {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Distributor can't work with others drugs"
   participant(t): "org.example.mynetwork.Distributor"
   operation: CREATE, UPDATE, DELETE
   resource(c): "org.example.mynetwork.Drug"
@@ -271,7 +271,7 @@ rule DistributorDoesNotUpdateOthersDrugs {
 }
 
 rule PharmacistDoesNotUpdateOthersDrugs {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Pharmacist can't work with others drugs"
   participant(t): "org.example.mynetwork.Pharmacist"
   operation: CREATE, UPDATE, DELETE
   resource(c): "org.example.mynetwork.Drug"
@@ -280,7 +280,7 @@ rule PharmacistDoesNotUpdateOthersDrugs {
 }
 
 rule ManufacturerCanAccessM2W {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Manufacturer can access the transaction M2W"
   participant: "org.example.mynetwork.Manufacturer"
   operation: ALL
   resource: "org.example.mynetwork.M2W"
@@ -288,7 +288,7 @@ rule ManufacturerCanAccessM2W {
 }
 
 rule WholesalerCannotAccessM2W {
-  description: "Wholesaler cannot work with their own drugs"
+  description: "Wholesaler can't access the transaction M2W"
   participant: "org.example.mynetwork.Manufacturer"
   operation: ALL
   resource: "org.example.mynetwork.M2W"
@@ -296,7 +296,7 @@ rule WholesalerCannotAccessM2W {
 }
 
 rule WholesalerCanAccessW2M {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Wholesaler can access the transaction W2M"
   participant: "org.example.mynetwork.Wholesaler"
   operation: ALL
   resource: "org.example.mynetwork.W2M"
@@ -304,7 +304,7 @@ rule WholesalerCanAccessW2M {
 }
 
 rule WholesalerCanAccessW2D {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Wholesaler can access the transaction W2D"
   participant: "org.example.mynetwork.Wholesaler"
   operation: ALL
   resource: "org.example.mynetwork.W2D"
@@ -312,7 +312,7 @@ rule WholesalerCanAccessW2D {
 }
 
 rule DistributorCanAccessD2W {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Distributor can access the transaction D2W"
   participant: "org.example.mynetwork.Distributor"
   operation: ALL
   resource: "org.example.mynetwork.D2W"
@@ -320,7 +320,7 @@ rule DistributorCanAccessD2W {
 }
 
 rule DistributorCanAccessD2P {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Distributor can access the transaction D2P"
   participant: "org.example.mynetwork.Distributor"
   operation: ALL
   resource: "org.example.mynetwork.D2P"
@@ -328,7 +328,7 @@ rule DistributorCanAccessD2P {
 }
 
 rule PharmacistCanAccessP2D {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Pharmacist can access the transaction P2D"
   participant: "org.example.mynetwork.Pharmacist"
   operation: ALL
   resource: "org.example.mynetwork.P2D"
@@ -344,7 +344,7 @@ rule ManufacturerCanViewDrug {
 }
 
 rule WholesalerCanViewDrug {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Wholesaler can see/work with their own drugs"
   participant: "org.example.mynetwork.Wholesaler"
   operation: ALL
   resource: "org.example.mynetwork.Drug"
@@ -352,7 +352,7 @@ rule WholesalerCanViewDrug {
 }
 
 rule DistributorCanViewDrug {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Distributor can see/work with their own drugs"
   participant: "org.example.mynetwork.Distributor"
   operation: ALL
   resource: "org.example.mynetwork.Drug"
@@ -360,7 +360,7 @@ rule DistributorCanViewDrug {
 }
 
 rule PharmacistCanViewDrug {
-  description: "Manufacturer can see/work with their own drugs"
+  description: "Pharmacist can see/work with their own drugs"
   participant: "org.example.mynetwork.Pharmacist"
   operation: ALL
   resource: "org.example.mynetwork.Drug"
@@ -608,5 +608,4 @@ rule PharmacistDoesNotAccessMRejectProposal {
   resource: "org.example.mynetwork.MRejectProposal"
   action: DENY
 }
-
 
